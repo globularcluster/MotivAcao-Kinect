@@ -8,4 +8,9 @@ public class CarregarCena : MonoBehaviour
 		SceneManager.LoadScene (nomeDaCena);
 		Debug.Log ("carregando cena " + nomeDaCena);
 	}
+
+	public void exitGame ()
+	{
+		Application.Quit ();
+	}
 }
