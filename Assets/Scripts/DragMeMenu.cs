@@ -34,7 +34,9 @@ public class DragMeMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 		group.blocksRaycasts = false;
 
 		image.sprite = GetComponent<Image> ().sprite;
-		//image.SetNativeSize();
+		image.SetNativeSize ();
+
+		image.transform.localScale = new Vector3 (0.4f, 0.4f, 0.4f);
 
 		if (dragOnSurfaces)
 			m_DraggingPlanes [eventData.pointerId] = transform as RectTransform;

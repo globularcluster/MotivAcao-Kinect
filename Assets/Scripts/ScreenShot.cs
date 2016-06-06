@@ -16,7 +16,7 @@ public class ScreenShot : MonoBehaviour
 	{
 		foreach (Transform child in parent.transform) {
 			string cn = child.name;
-			if (cn == "imagem_a_editar" || cn == "drop_spots")
+			if (cn == "imagem_a_editar" || cn == "drop_spots" || cn == "HandCursor")
 				continue;
 
 			child.gameObject.SetActive (false);
@@ -28,7 +28,7 @@ public class ScreenShot : MonoBehaviour
 	{
 		foreach (Transform child in parent.transform) {
 			string cn = child.name;
-			if (cn == "menu_arvore" || cn == "menu_elementos")
+			if (cn == "menu_arvore" || cn == "menu_elementos" || cn == "HandCursor")
 				continue;
 
 			child.gameObject.SetActive (true);

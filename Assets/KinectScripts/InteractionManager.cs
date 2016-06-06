@@ -349,8 +349,11 @@ public class InteractionManager : MonoBehaviour
 				debugText.GetComponent<GUIText> ().text = "Please check the Kinect SDK installation.";
 		} catch (Exception ex) {
 			string message = ex.Message + " - " + InteractionWrapper.GetNuiErrorString (hr);
-			//Debug.LogError(ex.ToString());
-			
+			Debug.LogError (ex.ToString ());
+			Debug.Log ("Kinect não conectado! Desabilitando o component InteractonManager...");
+			GetComponent<InteractionManager> ().enabled = false;
+			handCursor.SetActive (false);
+
 			if (debugText != null) {
 				debugText.GetComponent<GUIText> ().text = message;
 			}
